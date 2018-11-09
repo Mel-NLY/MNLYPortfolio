@@ -796,15 +796,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * drop cap 
  */
 .drop-cap:first-letter {
-	float: left;
-	margin: 0;
-	padding: 1.5rem .6rem 0 0;
-	font-size: 8.4rem;
-	font-family: "poppins-bold", sans-serif;
-	line-height: 6rem;
-	text-indent: 0;
-	background: transparent;
-	color: #313131;
+    float: left;
+    margin: 0;
+    padding: 1.5rem .6rem 0 0;
+    font-size: 8.4rem;
+    font-family: "poppins-bold", sans-serif;
+    line-height: 6rem;
+    text-indent: 0;
+    background: transparent;
+    color: #7115c1;
 }
 
 /**
@@ -1026,7 +1026,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #7d7d7d;
 }
 .section-intro {
-	max-width: 700px;
+	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -1035,7 +1035,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
-	font-size: 3.6rem;
+	font-size: 36px;
 	color: #313131;
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
@@ -1096,7 +1096,7 @@ header .row {
 header .top-bar {
 	display: block;
 	background: #000000;
-	min-width: 220px;
+	min-width: 80px;
 	min-height: 66px;
 	position: absolute;
 	left: 90px;
@@ -1346,9 +1346,8 @@ header .logo a {
 }
 .intro-content .intro-position {
 	font-family: "lora-regular", serif;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 	line-height: 2.4rem;
-	text-transform: uppercase;
 	letter-spacing: .2rem;
 	color: #FFFFFF;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -1497,20 +1496,20 @@ header .logo a {
 }
 
 .intro-info {
-	margin-top: 4.2rem;
+	margin-top: 0rem;
 	margin-right: -30px;
-	margin-left: -30px;
+	margin-left: -25px;
 }
 .intro-info img {
-	height: 9rem;
-	width: 9rem;
+	height: 12rem;
+	width: 12rem;
 	border-radius: 50%;
-	margin: .9rem 0 0 0;
+	margin: 0 0 0 0;
 	float: left;
 }
 .intro-info .lead {
 	text-align: left;
-	padding-left: 13rem;
+	padding-left: 15rem;
 }
 
 .about-content {
