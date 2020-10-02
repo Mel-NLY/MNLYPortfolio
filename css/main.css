@@ -594,7 +594,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
+	color: #8700ff;
 	border-bottom: 1px solid #8700ff;
 }
 label, legend {
@@ -1101,6 +1101,8 @@ header .top-bar {
 	position: absolute;
 	left: 90px;
 	top: 0;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
 header .logo {
 	float: left;
@@ -1127,13 +1129,15 @@ header .logo a {
  */
 .menu-toggle {
 	float: left;
-	width: 40px;
+	width: 130px;
 	height: 40px;
 	margin-left: 20px;
 	margin-top: 13px;
 	display: block;
 	position: relative;
 }
+
+/*Menubar 3 lines*/
 .menu-toggle span {
 	display: block;
 	background-color: #8700ff;
@@ -1144,7 +1148,7 @@ header .logo a {
 	text-shadow: none;
 	color: transparent;
 	position: absolute;
-	right: 8px;
+	right: 65px;
 	top: 50%;
 	bottom: auto;
 	left: auto;
@@ -1154,6 +1158,7 @@ header .logo a {
 	-ms-transition: background 0.2s ease-in-out;
 	transition: background 0.2s ease-in-out;
 }
+
 .menu-toggle span::before, .menu-toggle span::after {
 	content: '';
 	width: 100%;
@@ -1335,7 +1340,7 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #cc005f;
+	color:#8700ff;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
@@ -1381,7 +1386,7 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #cc005f;
+	border-color: #8700ff;
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1413,7 +1418,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color:#8700ff;
 }
 
 /**
@@ -1953,7 +1958,7 @@ header .logo a {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: #cc005f;
+	background: #8700ff;
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2275,7 +2280,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: #cc005f;
+	background: #8700ff;
 }
 #message-warning, #message-success {
 	display: none;
