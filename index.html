@@ -19,13 +19,16 @@
    ================================================== -->
    <link rel="stylesheet" href="css/base.css">  
    <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
-
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+   
    <!-- script
    ================================================== -->   
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
-
+	<script src="js/carousel.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+	
    <!-- favicons
 	================================================== -->
 	<link rel="icon" type="image/jpg" href="images/micon.jpg"/>
@@ -36,7 +39,7 @@
 
 	<!-- header 
    ================================================== -->
-   <header>   	
+    <header>   	
    	<div class="row">
 
    		<div class="top-bar">
@@ -178,7 +181,7 @@
 	<!-- Portfolio Section
    ================================================== -->
 	<section id="portfolio">
-
+		
 		<div class="row section-intro">
 			<div class="col-twelve">
 
@@ -186,15 +189,14 @@
 				<h3 style="color:darkgrey">Projects I have undertaken, developed and completed</h3>
 
 			</div>   		
-   		</div> <!-- /section-intro--> 
+		</div> <!-- /section-intro--> 
 
-		<div class="row portfolio-content">
+		<!-- tiny-slider -->
+		<div class="tartist-tiny-slider-wrap">
 
-			<div class="col-twelve">
+			<div class="tartist-tiny-slider" data-chunksize="2">
 
-				<!-- portfolio-wrapper -->
-				<div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/portfolio/modals/NAVX.jpg" alt="NAV X" style="width:110%">
@@ -210,7 +212,9 @@
 							</a>
 						</div>	               
 					</div> <!-- /folio-item -->
+				</div> <!-- /slider-item -->
 
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/portfolio/modals/ToiletLehPoster.jpg" alt="ToiletLeh">
@@ -226,7 +230,9 @@
 							</a>
 						</div>
 					</div> <!-- /folio-item -->
+				</div> <!-- /slider-item -->
 
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/portfolio/modals/WEB.jpg"alt="Clouds">
@@ -242,7 +248,9 @@
 							</a>
 						</div>
 					</div> <!-- /folio-item -->
+				</div> <!-- /slider-item -->
 
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
 						<div class="item-wrap">
 							<img src="images/portfolio/modals/Xplore.jpg" alt="Xplore" style="width:110%">
@@ -258,9 +266,11 @@
 							</a>
 						</div>
 					</div> <!-- /folio-item -->     
+				</div> <!-- /slider-item -->
 
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
-					<div class="item-wrap">
+						<div class="item-wrap">
 							<img src="images/portfolio/modals/SSD.png" alt="Secure Software Development">
 							<a href="#modal-05" class="overlay">             		                  
 								<div class="folio-item-table">
@@ -274,9 +284,11 @@
 							</a>
 						</div>
 					</div> <!-- /folio-item -->
+				</div> <!-- /slider-item -->
 
+				<div class="tartist-tiny-slider__item">
 					<div class="bgrid folio-item">
-					<div class="item-wrap">
+						<div class="item-wrap">
 							<img src="images/portfolio/modals/CSharp.jpg" alt="C# Project" style="width:110%">
 							<a href="#modal-06" class="overlay">
 								<div class="folio-item-table">
@@ -288,131 +300,130 @@
 									</div>	                      	
 								</div>                    
 							</a>
-					</div>
-					</div> <!-- /folio-item -->   
-
-					<!-- modal popups - begin
-					============================================================= -->
-					<div id="modal-01" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/NAVX.jpg" alt="" style="width:110%"/>
-						</div>      	
-						<div class="description-box">
-							<h4>NAV X</h4>		      
-							<p>
-								For students and visitors of the campus
-								who want to get to a particular place but don’t know the way.
-								The Nav X
-								is a mobile-friendly navigation application
-								that allows users to find the fastest way to reach their destination.
-								Unlike regular aerial view maps,
-								our project emphasizes on AR that displays accurate routes in a more interactive way.
-							</p>
-							<div class="categories">Mobile Application Development, Swift</div>			               
 						</div>
-						<div class="link-box">
-							<a href="https://mnly0814.wixsite.com/navx">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>		      
-					</div> <!-- /modal-01 -->
+					</div> <!-- /folio-item --> 
+				</div> <!-- /slider-item -->
+				
+			</div>
 
-					<div id="modal-02" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/ToiletLehPoster.jpg" alt="" />
-						</div>      	
-						<div class="description-box">
-							<h4>ToiletLeh</h4>		      
-							<p>
-								Ever needed to go to the toilet so badly, but unable to find one?
+		</div><!-- /tiny-slider -->
 
-								There have been grievances by people who find it difficult to locate a toilet, especially in areas where signs to go to the toilet is poorly placed or in tucked-away areas like HDB blocks. Furthermore, many public toilets are poorly maintained and lack essential items such as hand soap and toilet paper.
+		<!-- modal popups - begin
+		============================================================= -->
+		<div id="modal-01" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/NAVX.jpg" alt="" style="width:110%"/>
+			</div>      	
+			<div class="description-box">
+				<h4>NAV X</h4>		      
+				<p>
+					For students and visitors of the campus
+					who want to get to a particular place but don’t know the way.
+					The Nav X
+					is a mobile-friendly navigation application
+					that allows users to find the fastest way to reach their destination.
+					Unlike regular aerial view maps,
+					our project emphasizes on AR that displays accurate routes in a more interactive way.
+				</p>
+				<div class="categories">Mobile Application Development, Swift</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://mnly0814.wixsite.com/navx">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>		      
+		</div> <!-- /modal-01 -->
 
-								Thus, we decided to create ToiletLeh – a free mobile application that shows users the nearest toilet in the vicinity, how to get there as quick as possible and also show the cleanliness rating of the toilet.
-							</p>
-							<div class="categories">Python, Kivy, Raspberry Pi 3</div>			               
-						</div>
-						<div class="link-box">
-							<a href="https://melissanly.wordpress.com/">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>		      
-					</div> <!-- /modal-02 -->
+		<div id="modal-02" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/ToiletLehPoster.jpg" alt="" />
+			</div>      	
+			<div class="description-box">
+				<h4>ToiletLeh</h4>		      
+				<p>
+					Ever needed to go to the toilet so badly, but unable to find one?
 
-					<div id="modal-03" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/WEB.jpg" alt="" />
-						</div>      	
-						<div class="description-box">
-							<h4>Student EPortfolio</h4>		      
-							<p>
-								Creating a functional website for students to be able to publish their works and for mentors or lecturers to verify the projects. This is all necessary to be done before the public is able to see the Students' work.
-							</p>
-							<div class="categories">Web Development (HTML, CSS, Javascript)</div>			               
-						</div>
-						<div class="link-box">
-							<a href="https://github.com/MelissaNgLiYun/Student-EPortfolio">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>
-					</div> <!-- /modal-03 -->
+					There have been grievances by people who find it difficult to locate a toilet, especially in areas where signs to go to the toilet is poorly placed or in tucked-away areas like HDB blocks. Furthermore, many public toilets are poorly maintained and lack essential items such as hand soap and toilet paper.
 
-					<div id="modal-04" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/Xplore.jpg" alt="" style="width:110%"/>
-						</div>      	
-						<div class="description-box">
-							<h4>Xplore</h4>		      
-							<p>
-								Xplore is targeted at an international audience who travel. The application allows the users to plan their journey, collate their travel photos, track their To-Do list and more! It's designed to be user-friendly and most of the features are able to work offline. Share your experience with us and allow us to join you on this exciting journey!
-							</p>
-							<div class="categories">Mobile Application Development, Java</div>			               
-						</div>
-						<div class="link-box">
-							<a href="https://play.google.com/store/apps/details?id=sg.edu.np.s10177744connect.madassignment">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>		      
-					</div> <!-- /modal-04 -->
+					Thus, we decided to create ToiletLeh – a free mobile application that shows users the nearest toilet in the vicinity, how to get there as quick as possible and also show the cleanliness rating of the toilet.
+				</p>
+				<div class="categories">Python, Kivy, Raspberry Pi 3</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://melissanly.wordpress.com/">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>		      
+		</div> <!-- /modal-02 -->
 
-					<div id="modal-05" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/SSD.png" alt="" />
-						</div>      	
-						<div class="description-box">
-							<h4>SSD</h4>		      
-							<p>
-								For our core module, we had been tasked to come up with a secure online website. Preventing any vulnerabilities like SQL Injection or Bruteforce attacks.
-							</p>
-							<div class="categories">Secure Software Development</div>			               
-						</div>
-						<div class="link-box">
-							<a href="https://github.com/MelissaNgLiYun/Secure-Software-Development-Project">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>		      
-					</div> <!-- /modal-05 -->
+		<div id="modal-03" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/WEB.jpg" alt="" />
+			</div>      	
+			<div class="description-box">
+				<h4>Student EPortfolio</h4>		      
+				<p>
+					Creating a functional website for students to be able to publish their works and for mentors or lecturers to verify the projects. This is all necessary to be done before the public is able to see the Students' work.
+				</p>
+				<div class="categories">Web Development (HTML, CSS, Javascript)</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://github.com/MelissaNgLiYun/Student-EPortfolio">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>
+		</div> <!-- /modal-03 -->
 
-					<div id="modal-06" class="popup-modal slider mfp-hide">	
-						<div class="media">
-							<img src="images/portfolio/modals/CSharp.png" alt="" />
-						</div>      	
-						<div class="description-box">
-							<h4>Front-End Development</h4>		      
-							<p>
-								Designing the User Interface for users who are interested in knowing the hotspots in the different parts of the world.
-							</p>
-							<div class="categories">Front-End Development</div>			               
-						</div>
-						<div class="link-box">
-							<a href="https://github.com/MelissaNgLiYun/WondersOfTheWorld">Details</a>
-							<a href="#" class="popup-modal-dismiss">Close</a>
-						</div>		      
-					</div> <!-- /modal-06 -->
+		<div id="modal-04" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/Xplore.jpg" alt="" style="width:110%"/>
+			</div>      	
+			<div class="description-box">
+				<h4>Xplore</h4>		      
+				<p>
+					Xplore is targeted at an international audience who travel. The application allows the users to plan their journey, collate their travel photos, track their To-Do list and more! It's designed to be user-friendly and most of the features are able to work offline. Share your experience with us and allow us to join you on this exciting journey!
+				</p>
+				<div class="categories">Mobile Application Development, Java</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://play.google.com/store/apps/details?id=sg.edu.np.s10177744connect.madassignment">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>		      
+		</div> <!-- /modal-04 -->
 
-				<!-- modal popups - end
-				============================================================= -->
+		<div id="modal-05" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/SSD.png" alt="" />
+			</div>      	
+			<div class="description-box">
+				<h4>SSD</h4>		      
+				<p>
+					For our core module, we had been tasked to come up with a secure online website. Preventing any vulnerabilities like SQL Injection or Bruteforce attacks.
+				</p>
+				<div class="categories">Secure Software Development</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://github.com/MelissaNgLiYun/Secure-Software-Development-Project">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>		      
+		</div> <!-- /modal-05 -->
 
-				</div> <!-- /portfolio-wrapper --> 
+		<div id="modal-06" class="popup-modal slider mfp-hide">	
+			<div class="media">
+				<img src="images/portfolio/modals/CSharp.png" alt="" />
+			</div>      	
+			<div class="description-box">
+				<h4>Front-End Development</h4>		      
+				<p>
+					Designing the User Interface for users who are interested in knowing the hotspots in the different parts of the world.
+				</p>
+				<div class="categories">Front-End Development</div>			               
+			</div>
+			<div class="link-box">
+				<a href="https://github.com/MelissaNgLiYun/WondersOfTheWorld">Details</a>
+				<a href="#" class="popup-modal-dismiss">Close</a>
+			</div>		      
+		</div> <!-- /modal-06 -->
 
-			</div>  <!-- /twelve -->   
-
-		</div> <!-- /portfolio-content --> 
+		<!-- modal popups - end
+		============================================================= -->
 			
 	</section> <!-- /portfolio --> 
 

@@ -64,42 +64,6 @@
 	});	
 
 
-	/*----------------------------------------------------- */
-	/* Stat Counter
-  	------------------------------------------------------- */
-   var statSection = $("#stats"),
-       stats = $(".stat-count");
-
-   statSection.waypoint({
-
-   	handler: function(direction) {
-
-      	if (direction === "down") {       		
-
-			   stats.each(function () {
-				   var $this = $(this);
-
-				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-				   	duration: 4000,
-				   	easing: 'swing',
-				   	step: function (curValue) {
-				      	$this.text(Math.ceil(curValue));
-				    	}
-				  	});
-				});
-
-       	} 
-
-       	// trigger once only
-       	this.destroy();      	
-
-		},
-			
-		offset: "90%"
-	
-	});	
-
-
 	/*---------------------------------------------------- */
 	/*	Masonry
 	------------------------------------------------------ */
@@ -118,7 +82,7 @@
 	/*----------------------------------------------------*/
 	/*	Modal Popup
 	------------------------------------------------------*/
-   $('.item-wrap a').magnificPopup({
+   $('.tartist-tiny-slider__item a').magnificPopup({
 
       type:'inline',
       fixedContentPos: false,
@@ -170,7 +134,7 @@
 
        handler: function(direction) {
 
-		   var active_section;
+		    var active_section;
 
 			active_section = $('section#' + this.element.id);
 
@@ -178,7 +142,7 @@
 
 			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
 
-         navigation_links.parent().removeClass("current");
+        	navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
 
 		}, 
@@ -289,3 +253,60 @@
 	});		
 
 })(jQuery);
+
+/*---------------------------------------------------- */
+/* Tiny Slider
+------------------------------------------------------ */ 
+var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+        callback.call(scope, i, array[i]); // passes back stuff we need
+    }
+}
+
+// select all slider parent div.tartist-tiny-slider
+var sliders = document.querySelectorAll('.tartist-tiny-slider');
+
+// chunk function to make groups for every slider's childrens
+var chunk = function ( array, size ) {
+    let arr = [];
+    for ( let i = 0; i < array.length; i += size ) {
+        let newSlicedArray = Array.prototype.slice.call( array, i, i + size );
+        arr.push(newSlicedArray);
+    }
+    return arr;
+}
+
+// applying foreach function to the sliders
+forEach(sliders, function (index, value) {
+
+    //selecting childrens
+    let childrens = value.querySelectorAll(".tartist-tiny-slider__item");
+
+    //getting chunksize from the parent
+    let chunkSize = value.dataset.chunksize;
+
+    //making final arrays for the children with chunk size
+    let final = chunk( childrens, parseInt(chunkSize) );
+
+    //wrapping the chunks with div.wrap
+    let newHTML = final.map( towrap => towrap.reduce( (acc, el) => (acc.appendChild(el),acc) , document.createElement('div') ) ).forEach( el => {
+        el.className ="wrap";
+        value.appendChild(el)
+    })
+
+    //initialize tiny slider    
+    let slider = tns({
+        container: value,
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        autoplayButtonOutput: false,
+        loop: true,
+        mouseDrag: true,
+        gutter: 20,
+        controls: false,
+        navPosition: "bottom",
+        nav: true,
+    });
+
+});
