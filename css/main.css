@@ -1864,6 +1864,8 @@ header .logo a {
 	transition: all 0.5s ease-in-out;
 	position: relative;
 	left: -100%;
+	padding-top: 35%;
+	padding-bottom: 65%;
 }
 
 #portfolio .folio-title {
@@ -1881,10 +1883,10 @@ header .logo a {
 	letter-spacing: .1rem;
 	color: rgba(255, 255, 255, 0.6);
 }
-#portfolio .folio-item:hover .overlay {
+#portfolio .tartist-tiny-slider__item:hover .overlay {
 	background: rgba(0, 0, 0, 0.8);
 }
-#portfolio .folio-item:hover .folio-item-cell {
+#portfolio .tartist-tiny-slider__item:hover .folio-item-cell {
 	left: 0;
 }
 #portfolio .folio-item:hover img {
@@ -2553,9 +2555,6 @@ footer .copyright span:last-child::after {
     align-items: center;
     height: 250px;
     font-size: 1.2em;
-	border: #000000;
-	border-width: 10px;
-	border-radius: 5%;
 }
 .tartist-tiny-slider__item > img {
     width: 100%;
