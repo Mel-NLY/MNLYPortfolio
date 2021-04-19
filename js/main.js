@@ -20,8 +20,7 @@
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
-      });       
-
+      });
   	})
 
 
@@ -55,6 +54,24 @@
         navigationText: false
     });
 
+	/*---------------------------------------------------- */
+	/* Background Randomizer
+	------------------------------------------------------ */ 
+	var totalCount = 16;
+	var bg = Math.floor(Math.random() * totalCount);
+	$('#intro').css({
+		"background": "#151515 url(./images/bg/bg"+bg+".jpg) no-repeat center bottom",
+		"-webkit-background-size": "cover",
+		"-moz-background-size": "cover",
+		"background-size": "cover",
+		"background-attachment": "fixed",
+		"width": "100%",
+		"height": "100%",
+		"min-height": "610px",
+		"display": "table",
+		"position": "relative",
+		"text-align": "center"
+	});
 
 	/*----------------------------------------------------- */
 	/* Alert Boxes

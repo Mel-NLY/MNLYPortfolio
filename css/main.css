@@ -47,6 +47,10 @@
  *
  * ------------------------------------------------------------------- 
  */
+* {
+	cursor: url('../images/mycursorgame.cur'), default;	
+}
+
 html {
 	font-size: 10px;
 }
@@ -1295,7 +1299,6 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1314,7 +1317,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	opacity: .80;
 }
 
 .intro-content {
@@ -2366,6 +2369,16 @@ header .logo a {
 }
 .contact-info h5 {
 	color: #8700ff;
+}
+
+.contact-info a {
+	color: #FFFFFF;
+	cursor: pointer;	
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 /**
