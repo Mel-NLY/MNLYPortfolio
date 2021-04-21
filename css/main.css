@@ -87,6 +87,7 @@ body {
  * -------------------------------------------------------------------
  */
 a, a:visited {
+	cursor: pointer;
 	color: #000000;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -2185,6 +2186,118 @@ header .logo a {
 	}
 }
 
+/** 
+ * ===================================================================
+ * 18. certifications - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+#certifications {
+	background: #FFFFFF;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+#certifications .section-intro {
+	margin-bottom: 3rem;
+}
+
+.cert-list{
+    line-height: 1;
+    list-style:none;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+.cert-list li{
+	cursor: pointer;
+    display: inline-block;
+    box-sizing:border-box;
+    position: relative;
+    text-align:left;
+    font:normal 16px sans-serif;
+    padding: 15px 30px 15px 20px;
+    margin: 12px;
+    border:1px solid #dbe3e7;
+	z-index: 1;
+}
+
+.cert-list li::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -1000px;
+	width: 80px;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+	transform: skewX(35deg);
+	transition: 0s;
+}
+
+.cert-list li:hover::before{
+	left: calc(100% + 10px);
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+
+.cert-list li:hover{
+	transform: scale(1.4);
+	z-index: 1000;
+	background: #dbe3e7;
+	opacity: 1;
+}
+
+.cert-list .cert{
+    float: left;
+    width:100px;
+    text-align: left;
+}
+
+.cert-list .cert img{
+    border-radius: 50%;
+    border:0;
+}
+
+.cert-list p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+    margin-top: 20px;
+    max-width:340px;
+}
+
+.cert-list p a{
+	font-family: "poppins-bold", sans-serif;
+    color:#5d6569;
+    text-decoration: none;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.cert-list p span{
+	font-family: "poppins-regular", sans-serif;
+    display: block;
+    font-size: 13px;
+    color:#808d93;
+    padding-top:4px;
+}
+
+/**
+ * responsive:
+ * certifications
+ * ------------------------------------------------------------------- 
+ */
+ @media (max-width: 400px) {
+    .cert-list li{
+        margin: 10px 0;
+    }
+    .cert-list .delete{
+        top: 10px;
+        right: 10px;
+    }
+}
+
 
 /** 
  * ===================================================================
@@ -2372,13 +2485,7 @@ header .logo a {
 }
 
 .contact-info a {
-	color: #FFFFFF;
-	cursor: pointer;	
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+	color: #FFFFFF;	
 }
 
 /**
