@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: mnly.ga
+Token: 0ffbe64b685837de34f5b415e8271fd338b6b300f1b8b609a3f5653c06cbeeeb
