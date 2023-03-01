@@ -57,7 +57,7 @@
 	/*---------------------------------------------------- */
 	/* Background Randomizer
 	------------------------------------------------------ */ 
-	var totalCount = 16;
+	var totalCount = 20;
 	var bg = Math.floor(Math.random() * totalCount);
 	$('#intro').css({
 		"background": "#151515 url(./images/bg/bg"+bg+".jpg) no-repeat center bottom",
